@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detection Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+    <header>
+        <div class="company-logo">D</div>
+        <nav class="navbar">
+            <ul class="nav-items">
+                <li class="nav-item"><a href="#" class="nav-link">HOME</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">SAMPLES</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">MODEL DESCRIPTION</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">ABOUT US</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <i class="bx bx-menu"></i>
+            <i class="bx bx-x"></i>
+        </div>
+    </header>
+    <main>
+        <!-- HOME SECTION -->
+        <section class="container section-1">
+            <div class="result-slogan">
+                <h1 class="company-title">DETECTION RESULTS</h1>
+                <h1 class="company-slogan">Prediction: {{ result }}</h1>
+                <br>
+                <div class="green"><a href="/" >Upload again</a></div>
+            </div>
+            <!-- Display the uploaded image -->
+            <div class="image-container">
+                <img src="{{ url_for('uploaded_file', filename=filename) }}" alt="Uploaded Image" class="uploaded-image">
+            </div>
+        </section>
+    </main>
+    
+  <footer>
+    <div class="container end-footer">
+      <div class="copyright">copyright © 2024 - Present • <b>TEAM SUPERNOVA</b></div>
+      <a class="designer" href="#">Unmasking Truth, One Pixel at a Time.</a>
+    </div>
+  </footer>
+
+
+</body>
+</html>

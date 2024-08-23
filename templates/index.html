@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepfake Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+  <header>
+    <div class="company-logo">D</div>
+    <nav class="navbar">
+      <ul class="nav-items">
+        <li class="nav-item"><a href="#" class="nav-link">HOME</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">SAMPLES</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">MODEL DESCRIPTION</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">ABOUT US</a></li>
+      </ul>
+    </nav>
+    <div class="menu-toggle">
+      <i class="bx bx-menu"></i>
+      <i class="bx bx-x"></i>
+    </div>
+  </header>
+  <main>
+    <!-- HOME SECTION -->
+    <section class="container section-1">
+      <div class="slogan">
+        <h1 class="company-title">DEEPFAKE DETECTOR</h1>
+ 
+        <h2 class="company-slogan">Upload an Image or Video for Deepfake Detection</h2>
+        <form action="/" method="post" enctype="multipart/form-data">
+          <div class="file-input-container">
+            <label class="sub-btn">
+              Choose File
+              <input type="file" name="file" accept="image/*,video/*" class="file-input">
+            </label>
+            <span class="file-name">No file chosen</span>
+          </div>            <input class="green" type="submit" value="Upload">
+        </form>
+      </div>
+      <div class="home-computer-container">
+        <img  src="{{url_for('static', filename='deepfake_face-removebg-preview.png')}}" alt="a computer in dark with shadow" class="home-img">
+      </div>
+    </section>
+
+   
+
+    
+
+
+      
+  </main>
+
+  <footer>
+    <div class="container end-footer">
+      <div class="copyright">copyright © 2024 - Present • <b>TEAM SUPERNOVA</b></div>
+      <a class="designer" href="#">Unmasking Truth, One Pixel at a Time.</a>
+    </div>
+  </footer>
+
+
+
+</body>
+<script>
+  document.querySelector('.file-input').addEventListener('change', function() {
+  const fileName = this.files.length ? this.files[0].name : 'No file chosen';
+  document.querySelector('.file-name').textContent = fileName;
+});
+
+</script>
+</html>
